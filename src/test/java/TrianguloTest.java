@@ -10,7 +10,7 @@ public class TrianguloTest {
         Triangulo trianguloEscaleno = new Triangulo();
 
         Assertions.assertEquals(trianguloEscaleno.checaTriangulo(3,4,5),
-                "Os lados informados formam um triângulo!" + " " + "O triângulo é ESCALENO!");
+                "Os lados informados formam um triângulo! O triângulo é ESCALENO!");
     }
 
     @Test
@@ -19,7 +19,7 @@ public class TrianguloTest {
         Triangulo trianguloIsosceles = new Triangulo();
 
         Assertions.assertEquals(trianguloIsosceles.checaTriangulo(5,5,4),
-                "Os lados informados formam um triângulo!" + " " + "O triângulo é ISÓSCELES!");
+                "Os lados informados formam um triângulo! O triângulo é ISÓSCELES!");
 
     }
 
@@ -29,7 +29,7 @@ public class TrianguloTest {
         Triangulo trianguloEquilatero = new Triangulo();
 
         Assertions.assertEquals(trianguloEquilatero.checaTriangulo(5,5,5),
-                "Os lados informados formam um triângulo!" + " " + "O triângulo é EQUILÁTERO!");
+                "Os lados informados formam um triângulo! O triângulo é EQUILÁTERO!");
     }
 
     @Test
@@ -38,7 +38,7 @@ public class TrianguloTest {
         Triangulo permutaA = new Triangulo();
 
         Assertions.assertEquals(permutaA.checaTriangulo(6,6,10),
-                "Os lados informados formam um triângulo!" + " " + "O triângulo é ISÓSCELES!");
+                "Os lados informados formam um triângulo! O triângulo é ISÓSCELES!");
     }
 
     @Test
@@ -47,7 +47,7 @@ public class TrianguloTest {
         Triangulo permutaB = new Triangulo();
 
         Assertions.assertEquals(permutaB.checaTriangulo(6,10,6),
-                "Os lados informados formam um triângulo!" + " " + "O triângulo é ISÓSCELES!");
+                "Os lados informados formam um triângulo! O triângulo é ISÓSCELES!");
     }
 
     @Test
@@ -56,7 +56,7 @@ public class TrianguloTest {
         Triangulo permutaC = new Triangulo();
 
         Assertions.assertEquals(permutaC.checaTriangulo(10,6,6),
-                "Os lados informados formam um triângulo!" + " " + "O triângulo é ISÓSCELES!");
+                "Os lados informados formam um triângulo! O triângulo é ISÓSCELES!");
     }
 
     @Test
