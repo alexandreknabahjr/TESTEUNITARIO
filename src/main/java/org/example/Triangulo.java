@@ -1,23 +1,73 @@
 package org.example;
-import java.util.Scanner;
 
 public class Triangulo {
 
+    private boolean eTriangulo(int a, int b, int c){
+
+        return (a + b > c) &&
+                (b + c > a) &&
+                (a + c > b);
+
+    }
+
+    private boolean eEquilatero(int a, int b, int c){
+
+        return (a == b) &&
+                (a == c);
+
+    }
+
+    private boolean eIsosceles(int a, int b, int c){
+
+        return (a == b) ||
+                (b == c) ||
+                (a == c);
+    }
+
+    private boolean tresZeros(int a, int b, int c){
+
+        return (a == 0) && (b == 0) && (c == 0);
+
+    }
+
+    private boolean umZero(int a, int b, int c){
+
+        return (a == 0) || (b == 0) || (c == 0);
+
+    }
+
+    private boolean valorNegativo(int a, int b, int c){
+
+        return (a < 0) || (b < 0) || (c < 0);
+
+    }
+
+    private boolean somaDeDoisLadosIgual (int a, int b, int c){
+
+        return ((a + b) == c) ||
+                ((b + c) == a) ||
+                ((a + c) == b);
+
+    }
+
+    private boolean somaDeDoisLadosMenor(int a, int b, int c){
+
+        return ((a + b) < c) ||
+                ((b + c) < a) ||
+                ((a + c) < b);
+
+    }
+
     public String checaTriangulo(int a, int b, int c) {
 
-        if ((a + b > c) &&
-                (b + c > a) &&
-                (a + c > b)) {
+        if (eTriangulo(a, b, c)) {
 
 
-            if ((a == b) &&
-                    (a == c)) {
+            if (eEquilatero(a, b, c)) {
 
                 return "Os lados informados formam um triângulo! O triângulo é EQUILÁTERO!";
 
-            } else if ((a == b) ||
-                    (b == c) ||
-                    (a == c)) {
+            } else if (eIsosceles(a, b, c)) {
 
                 return "Os lados informados formam um triângulo! O triângulo é ISÓSCELES!";
 
@@ -26,28 +76,23 @@ public class Triangulo {
                 return  "Os lados informados formam um triângulo! O triângulo é ESCALENO!";
 
             }
-        } else if ((a == 0) && (b == 0) && (c == 0)) {
+        } else if (tresZeros(a, b, c)) {
 
             return "Os lados informados NÃO formam um triângulo! Os três lados têm valor zero! Valor zero não é permitido!";
 
-        } else if ((a == 0) || (b == 0) || (c == 0)) {
+        } else if (umZero(a, b, c)) {
 
             return "Os lados informados NÃO formam um triângulo! Pelo menos um valor zero foi informado! Valor zero não é permitido!";
 
-        } else if ((a < 0) || (b < 0) || (c < 0)) {
+        } else if (valorNegativo(a, b, c)) {
 
                 return "Os lados informados NÃO formam um triângulo! Pelo menos um valor negativo foi informado! Valor negativo não é permitido!";
 
-
-        } else if(((a + b) == c) ||
-                ((b + c) == a) ||
-                ((a + c) == b)){
+        } else if(somaDeDoisLadosIgual (a, b, c)){
 
             return "Os lados informados NÃO formam um triângulo! A soma de dois lados é igual ao valor do terceiro lado!";
 
-        } else if(((a + b) < c) ||
-                ((b + c) < a) ||
-                ((a + c) < b)){
+        } else if(somaDeDoisLadosMenor(a, b, c)){
 
             return "Os lados informados NÃO formam um triângulo! A soma de dois lados é menor do que o terceiro lado!";
 
@@ -58,21 +103,7 @@ public class Triangulo {
 
     public static void main(String[] args) {
 
-        Scanner ladoAObj = new Scanner(System.in);
-        System.out.println("Digite o lado A do triângulo: ");
-        int ladoA = ladoAObj.nextInt();
-
-        Scanner ladoBObj = new Scanner(System.in);
-        System.out.println("Digite o lado B do triângulo: ");
-        int ladoB = ladoBObj.nextInt();
-
-        Scanner ladoCObj = new Scanner(System.in);
-        System.out.println("Digite o lado C do triângulo: ");
-        int ladoC = ladoCObj.nextInt();
-
-        Triangulo triangulo = new Triangulo();
-
-        String resultado = triangulo.checaTriangulo(ladoA, ladoB, ladoC);
+        System.out.println("Testes Unitários");
 
     }
 }
