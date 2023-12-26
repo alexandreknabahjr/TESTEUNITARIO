@@ -36,7 +36,7 @@ public class Triangulo {
 
         } else if ((a < 0) || (b < 0) || (c < 0)) {
 
-                return "Os lados informados NÃO formam um triângulo! Pelo menos um valor negativo foi informado! Valor zero não é permitido!";
+                return "Os lados informados NÃO formam um triângulo! Pelo menos um valor negativo foi informado! Valor negativo não é permitido!";
 
 
         } else if(((a + b) == c) ||

@@ -74,7 +74,7 @@ public class TrianguloTest {
         Triangulo negativo = new Triangulo();
 
         Assertions.assertEquals(negativo.checaTriangulo(-5,5,5),
-                "Os lados informados NÃO formam um triângulo! Pelo menos um valor negativo foi informado! Valor zero não é permitido!");
+                "Os lados informados NÃO formam um triângulo! Pelo menos um valor negativo foi informado! Valor negativo não é permitido!");
     }
 
     @Test
